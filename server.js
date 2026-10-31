@@ -258,7 +258,7 @@ app.get('/api/donations', auth, async (req, res) => { const { data, error } = aw
 app.patch('/api/donations/:id', auth, async (req, res) => { if (req.profile.role !== 'admin') return res.status(403).json({ error: 'Only admins can update donations.' }); const { data, error } = await req.supabase.from('donations').update({ status: req.body?.status }).eq('id', req.params.id).select('*, product:clothes(name)').single(); if (error) return fail(res, error, 'Unable to update donation.'); res.json({ donation: mapDonation(data) }); });
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-app.use(express.static(path.join(__dirname, '..', 'ReWear')));
+app.use(express.static(__dirname));
 app.use((error, _req, res, _next) => { if (error instanceof multer.MulterError || error.message) return res.status(400).json({ error: 'Upload failed. Check the image type and size.' }); res.status(500).json({ error: 'Unexpected server error.' }); });
 const port = Number(process.env.PORT) || 3000;
 app.listen(port, '0.0.0.0', () => console.log(`ReWear server listening on port ${port}`));
