@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register | ReWear</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand">ReWear</a>
+        <nav class="nav-menu">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="login.html">Login</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="auth-shell">
+      <div class="auth-card wide">
+        <h1>Create an account</h1>
+        <p class="muted">Join ReWear and start your sustainable fashion journey</p>
+        <form id="registerForm">
+          <div class="form-grid">
+            <div>
+              <label>Full Name</label>
+              <input id="fullName" type="text" />
+              <small class="field-error" data-error-for="fullName"></small>
+            </div>
+            <div>
+              <label>Email Address</label>
+              <input id="email" type="email" />
+              <small class="field-error" data-error-for="email"></small>
+            </div>
+            <div>
+              <label>Mobile Number</label>
+              <input id="phone" type="tel" inputmode="numeric" />
+              <small class="field-error" data-error-for="phone"></small>
+            </div>
+            <div>
+              <label>Password</label>
+              <input id="password" type="password" />
+              <small class="field-error" data-error-for="password"></small>
+            </div>
+            <div>
+              <label>Confirm Password</label>
+              <input id="confirmPassword" type="password" />
+              <small class="field-error" data-error-for="confirmPassword"></small>
+            </div>
+          </div>
+          <label>Address</label>
+          <textarea id="address"></textarea>
+          <small class="field-error" data-error-for="address"></small>
+          <div class="form-grid">
+            <div>
+              <label>City</label>
+              <input id="city" type="text" />
+              <small class="field-error" data-error-for="city"></small>
+            </div>
+            <div>
+              <label>State</label>
+              <input id="state" type="text" />
+              <small class="field-error" data-error-for="state"></small>
+            </div>
+            <div>
+              <label>Pincode</label>
+              <input id="pincode" type="text" inputmode="numeric" />
+              <small class="field-error" data-error-for="pincode"></small>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="submit">Create Account</button>
+        </form>
+        <p class="small-link">Already have an account? <a href="login.html">Login</a></p>
+      </div>
+    </main>
+
+    <div id="toastContainer" class="toast-container"></div>
+    <script src="js/storage.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/orders.js"></script>
+    <script src="js/rentals.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

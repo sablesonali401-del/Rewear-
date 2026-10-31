@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload Clothes | ReWear</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page-role="customer">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand">ReWear</a>
+        <button class="nav-toggle" id="navToggle">☰</button>
+        <nav class="nav-menu" id="navMenu">
+          <!--<a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="shop.html">Shop</a>-->
+          <a href="customer-dashboard.html">Dashboard</a>
+          <a href="upload.html">Upload Clothes</a>
+          <a href="#" data-logout>Logout</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="section">
+        <div class="container auth-card wide">
+          <h1>Upload Clothing</h1>
+          <form id="uploadForm">
+            <div class="form-grid">
+              <div>
+                <label>Clothing Name</label>
+                <input name="name" type="text" required />
+              </div>
+              <div>
+                <label>Category</label>
+                <select name="category" required>
+                  <option value="">Select</option>
+                  <option value="Men">Men</option>
+                  <option value="Women">Women</option>
+                  <option value="Kids">Kids</option>
+                  <option value="Dresses">Dresses</option>
+                  <option value="Shirts">Shirts</option>
+                  <option value="T-Shirts">T-Shirts</option>
+                  <option value="Jeans">Jeans</option>
+                  <option value="Jackets">Jackets</option>
+                  <option value="Traditional Wear">Traditional Wear</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div>
+                <label>Size</label>
+                <select name="size" required>
+                  <option value="">Select</option>
+                  <option value="XS">XS</option>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                </select>
+              </div>
+              <div>
+                <label>Brand</label>
+                <input name="brand" type="text" required />
+              </div>
+              <div>
+                <label>Condition</label>
+                <select name="condition" required>
+                  <option value="">Select</option>
+                  <option value="Excellent">Excellent</option>
+                  <option value="Very Good">Very Good</option>
+                  <option value="Good">Good</option>
+                </select>
+              </div>
+              <div>
+                <label>Type</label>
+                <select name="type" required>
+                  <option value="">Select</option>
+                  <option value="Sell">Sell</option>
+                  <option value="Rent">Rent</option>
+                  <option value="Donate">Donate</option>
+                </select>
+              </div>
+              <div>
+                <label>Expected Selling Price</label>
+                <input name="sellingPrice" type="number" min="1" required />
+              </div>
+              <div>
+                <label>Rental Price</label>
+                <input name="rentalPrice" type="number" min="1" required />
+              </div>
+            </div>
+            <label>Description</label>
+            <textarea name="description" required></textarea>
+            <label>Image</label>
+            <input id="productImage" type="file" accept="image/*" required />
+            <img id="uploadPreview" src="" alt="Preview" class="upload-preview" />
+            <button class="btn btn-primary" type="submit">Submit for Review</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <div id="toastContainer" class="toast-container"></div>
+    <script src="js/storage.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/orders.js"></script>
+    <script src="js/rentals.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

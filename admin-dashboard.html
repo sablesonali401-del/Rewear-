@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | ReWear</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page-role="admin">
+    <div class="dashboard-layout">
+      <aside class="sidebar">
+        <div class="brand sidebar-brand">ReWear</div>
+        <nav>
+          <a href="admin-dashboard.html" class="active">Dashboard</a>
+          <a href="#customers">Customers</a>
+          <a href="#owners">Owners</a>
+          <a href="#clothes">Clothes</a>
+          <a href="orders.html">Orders</a>
+          <a href="rentals.html">Rentals</a>
+          <a href="donations.html">Donations</a>
+          <a href="#" data-logout>Logout</a>
+        </nav>
+      </aside>
+
+      <main class="dashboard-main">
+        <header class="dashboard-header">
+          <h1>Admin Dashboard</h1>
+          <button id="resetDemoData" class="btn btn-danger btn-small">Reset Demo Data</button>
+        </header>
+
+        <section class="stats-grid">
+          <div class="stat-card"><span>Total Customers</span><strong id="totalCustomers">0</strong></div>
+          <div class="stat-card"><span>Total Owners</span><strong id="totalOwners">0</strong></div>
+          <div class="stat-card"><span>Total Products</span><strong id="totalProducts">0</strong></div>
+          <div class="stat-card"><span>Total Orders</span><strong id="totalOrders">0</strong></div>
+          <div class="stat-card"><span>Total Rentals</span><strong id="totalRentals">0</strong></div>
+          <div class="stat-card"><span>Total Donations</span><strong id="totalDonations">0</strong></div>
+        </section>
+
+        <section class="content-panel" id="customers">
+          <div class="panel-header"><h2>Users</h2></div>
+          <div id="adminUsersTable" class="table-wrap"></div>
+        </section>
+
+        <section class="content-panel" id="clothes">
+          <div class="panel-header"><h2>Clothes</h2></div>
+          <div id="adminClothesTable" class="table-wrap"></div>
+        </section>
+      </main>
+    </div>
+
+    <div id="toastContainer" class="toast-container"></div>
+    <script src="js/storage.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/orders.js"></script>
+    <script src="js/rentals.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

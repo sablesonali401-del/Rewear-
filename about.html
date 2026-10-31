@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | ReWear</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand">ReWear</a>
+        <button class="nav-toggle" id="navToggle">☰</button>
+        <nav class="nav-menu" id="navMenu">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <!-- <a href="shop.html">Shop</a>
+          <a href="donations.html">Donations</a>-->
+          <a href="login.html" data-auth-link="login">Login</a>
+         <!-- <a href="customer-dashboard.html" data-auth-link="customer">Dashboard</a>
+          <a href="owner-dashboard.html" data-auth-link="owner">Owner</a>
+          <a href="admin-dashboard.html" data-auth-link="admin">Admin</a>-->
+          <a href="#" data-auth-link="logout" data-logout>Logout</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="section page-intro">
+        <div class="container narrow">
+          <span class="eyebrow">About ReWear</span>
+          <h1>What is ReWear?</h1>
+          <p>ReWear is a sustainable second-hand clothing marketplace that allows people to buy, sell, rent, and donate pre-loved fashion. It helps extend the life of garments while making fashion more affordable and eco-friendly.</p>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container two-col">
+          <div>
+            <h2>Why second-hand clothing?</h2>
+            <p>Fast fashion contributes heavily to waste, harmful production practices, and overconsumption. Second-hand fashion gives clothes a longer life cycle while preserving their style and usefulness.</p>
+          </div>
+          <div>
+            <h2>Environmental benefits</h2>
+            <p>By reusing clothing, we reduce landfill waste, conserve natural resources, and reduce the demand for new textile production. Every item rescued helps support a more sustainable fashion system.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container two-col">
+          <div>
+            <h2>Affordable fashion</h2>
+            <p>ReWear makes quality fashion more accessible by offering used clothing at budget-friendly prices. This allows individuals to refresh their wardrobe without paying full retail costs.</p>
+          </div>
+          <div>
+            <h2>Reuse and recycling</h2>
+            <p>Our platform encourages reuse, repair, and thoughtful consumption. When an item cannot be sold, it can be donated, reused by another person, or repurposed within the community.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container narrow center">
+          <h2>Donation and sustainability</h2>
+          <p>ReWear is built around the idea that fashion can be both stylish and responsible. Donating clothes creates positive impact by supporting communities, reducing waste, and encouraging mindful ownership.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div><h3>ReWear</h3><p>Second-hand fashion for a better tomorrow.</p></div>
+        <div><h4>Links</h4><ul><li><a href="about.html">About</a></li><li>
+          <!--<a href="shop.html">Shop</a></li><li><a href="login.html">Login</a></li></ul></div>-->
+      </div>
+    </footer>
+
+    <div id="toastContainer" class="toast-container"></div>
+    <script src="js/storage.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/orders.js"></script>
+    <script src="js/rentals.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

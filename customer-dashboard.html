@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Dashboard | ReWear</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page-role="customer" data-refresh-remote>
+    <div class="dashboard-layout">
+      <aside class="sidebar">
+        <div class="brand sidebar-brand">ReWear</div>
+        <nav>
+          <a href="customer-dashboard.html" class="active">Dashboard</a>
+          <a href="profile.html">Profile</a>
+          <a href="upload.html">Upload Clothes</a>
+          <a href="orders.html">My Orders</a>
+          <a href="rentals.html">My Rentals</a>
+          <a href="donations.html">My Donations</a>
+          <a href="shop.html">Shop</a>
+          <a href="#" data-logout>Logout</a>
+        </nav>
+      </aside>
+
+      <main class="dashboard-main">
+        <header class="dashboard-header">
+          <h1>Customer Dashboard</h1>
+          <span class="welcome-pill" id="dashboardUserName">Welcome</span>
+        </header>
+
+        <section id="customerStats" class="stats-grid"></section>
+
+        <section class="content-panel">
+          <div class="panel-header">
+            <h2>My clothing listings</h2>
+          </div>
+          <div class="inline-actions" role="tablist" aria-label="My listing type">
+            <button type="button" class="btn btn-primary btn-small" data-customer-listing-tab="Sell" role="tab" aria-selected="true">Sell</button>
+            <button type="button" class="btn btn-secondary btn-small" data-customer-listing-tab="Rent" role="tab" aria-selected="false">Rent</button>
+            <button type="button" class="btn btn-secondary btn-small" data-customer-listing-tab="Donate" role="tab" aria-selected="false">Donate</button>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Image</th><th>Product</th><th>Category</th><th>Price</th><th>Status</th><th>Availability</th><th>Submitted</th></tr>
+              </thead>
+              <tbody id="customerProductsTable" data-listing-type="Sell" role="tabpanel"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="content-panel">
+          <div class="panel-header">
+            <h2>My rental requests</h2>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Rental ID</th><th>Product</th><th>Dates</th><th>Amount</th><th>Status</th></tr>
+              </thead>
+              <tbody id="customerRentalRequests"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="content-panel">
+          <div class="panel-header">
+            <h2>Favorites</h2>
+          </div>
+          <div id="customerFavoritesList" class="cart-items"></div>
+        </section>
+
+        <section class="content-panel">
+          <div class="panel-header">
+            <h2>Cart</h2>
+          </div>
+          <div id="customerCartList" class="cart-items"></div>
+          <div class="cart-footer" style="margin-top: 1rem;">
+            <span>Total</span>
+            <strong id="customerCartTotal">₹0</strong>
+          </div>
+        </section>
+      </main>
+      
+    </div>
+
+    <div id="toastContainer" class="toast-container"></div>
+    <script src="js/storage.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/orders.js"></script>
+    <script src="js/rentals.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
